@@ -28,9 +28,9 @@ urlpatterns = [
 
 schema_view = get_schema_view(
    openapi.Info(
-      title="My API",
+      title="Simple Notes API",
       default_version='v1',
-      description="Test description",
+      description="RESTful API for creating, reading, updating, and deleting notes.",
    ),
    public=True,
    permission_classes=(permissions.AllowAny,),
@@ -51,9 +51,9 @@ def dynamic_schema_view(request, *args, **kwargs):
     url = get_full_url(request)
     view = get_schema_view(
         openapi.Info(
-            title="My API",
+            title="Simple Notes API",
             default_version='v1',
-            description="API Docs",
+            description="Interactive API documentation for the Notes backend.",
         ),
         public=True,
         url=url,
